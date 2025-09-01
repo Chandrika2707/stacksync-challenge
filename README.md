@@ -15,23 +15,11 @@ curl https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/health
 
 **Basic Execution:**
 ```bash
-# Multi-line version (for readability)
-curl -X POST https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/execute \
-  -H "Content-Type: application/json" \
-  -d '{"script": "def main():\n    return {\"message\": \"Hello from Cloud Run!\"}"}'
-
-# Single-line version (copy-paste friendly)
 curl -X POST https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/execute -H "Content-Type: application/json" -d '{"script": "def main():\n    return {\"message\": \"Hello from Cloud Run!\"}"}'
 ```
 
 **NumPy Example:**
 ```bash
-# Multi-line version (for readability)
-curl -X POST https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/execute \
-  -H "Content-Type: application/json" \
-  -d '{"script": "import numpy as np\ndef main():\n    return {\"random_number\": float(np.random.randn(1)[0])}"}'
-
-# Single-line version (copy-paste friendly)
 curl -X POST https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/execute -H "Content-Type: application/json" -d '{"script": "import numpy as np\ndef main():\n    return {\"random_number\": float(np.random.randn(1)[0])}"}'
 ```
 
@@ -242,35 +230,17 @@ curl https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/health
 
 ### Execute Script
 ```bash
-# Multi-line version
-curl -X POST https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/execute \
-  -H "Content-Type: application/json" \
-  -d '{"script": "def main():\n    return {\"message\": \"Test successful\"}"}'
-
-# Single-line version (copy-paste friendly)
 curl -X POST https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/execute -H "Content-Type: application/json" -d '{"script": "def main():\n    return {\"message\": \"Test successful\"}"}'
 ```
 
 ### Test with NumPy
 ```bash
-# Multi-line version
-curl -X POST https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/execute \
-  -H "Content-Type: application/json" \
-  -d '{"script": "import numpy as np\ndef main():\n    data = np.random.randn(10)\n    return {\"mean\": float(np.mean(data)), \"data\": data.tolist()}"}'
-
-# Single-line version (copy-paste friendly)
 curl -X POST https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/execute -H "Content-Type: application/json" -d '{"script": "import numpy as np\ndef main():\n    data = np.random.randn(10)\n    return {\"mean\": float(np.mean(data)), \"data\": data.tolist()}"}'
 ```
 
 ### Test with Pandas
 ```bash
-# Multi-line version
-curl -X POST https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/execute \
-  -H "Content-Type: application/json" \
-  -d '{"script": "import pandas as pd\nimport numpy as np\ndef main():\n    df = pd.DataFrame({\"x\": np.random.randn(5), \"y\": np.random.randn(5)})\n    return {\"correlation\": float(df[\"x\"].corr(df[\"y\"])), \"shape\": list(df.shape)}"}'
-
-# Single-line version (copy-paste friendly)
-curl -X POST https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/execute -H "Content-Type: application/json" -d '{"script": "import pandas as pd\nimport numpy as np\ndef main():\n    return {\"correlation\": float(df[\"x\"].corr(df[\"y\"])), \"shape\": list(df.shape)}"}'
+curl -X POST https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/execute -H "Content-Type: application/json" -d '{"script": "import pandas as pd\nimport numpy as np\ndef main():\n    df = pd.DataFrame({\"x\": np.random.randn(5), \"y\": np.random.randn(5)})\n    return {\"correlation\": float(df[\"x\"].corr(df[\"y\"])), \"shape\": list(df.shape)}"}'
 ```
 
 ## Docker
