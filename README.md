@@ -10,7 +10,7 @@ A secure, containerized API service that safely executes arbitrary Python script
 
 **Health Check:**
 ```bash
-curl https://safe-python-executor-dxrbv2b2dq-uc.a.run.app/health
+curl https://safe-python-executor-dxrbv2b2dq-uc.a.run.app
 ```
 
 **Basic Execution:**
